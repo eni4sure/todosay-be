@@ -1,0 +1,9 @@
+{
+  "name": "todosay",
+  "version": "1.0.0",
+  "description": "Todosay Backend built with Node, Express and Firebase",
+  "main": "src/index.js",
+  "repository": "https://github.com/eni4sure/todosay-be",
+  "author": "Todosay Team ❤️",
+  "license": "MIT"
+}
