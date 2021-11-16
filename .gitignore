@@ -1,0 +1,10 @@
+old
+node_modules
+src/firebase/todosay-firebase-sdk.json
+
+# production env files
+.env
+
+# exclude files in uploads
+uploads/*
+!uploads/.gitkeep
