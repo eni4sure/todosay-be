@@ -7,6 +7,6 @@ router.use(trimIncomingRequests);
 
 router.use("/auth", require("./auth.route.js"));
 
-router.use("/todo", require("./todo.route.js"));
+router.use("/todo", authGuard(), require("./todo.route.js"));
 
 module.exports = router;
