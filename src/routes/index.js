@@ -9,4 +9,6 @@ router.use("/auth", require("./auth.route.js"));
 
 router.use("/todo", authGuard(), require("./todo.route.js"));
 
+router.use("/speech", authGuard(), require("./speech.route.js"));
+
 module.exports = router;
