@@ -13,6 +13,11 @@ class TodoContoller {
     res.status(200).send(response("All todo", result));
   }
 
+  async getAllByUser(req, res) {
+    const result = await TodoServ.getAllByUser(req.params.userId);
+    res.status(200).send(response("All todo by user", result));
+  }
+
   async getOne(req, res) {
     const result = await TodoServ.getOne(req.params.todoId);
     res.status(200).send(response("todo data", result));

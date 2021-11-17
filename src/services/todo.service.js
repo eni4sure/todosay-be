@@ -16,6 +16,10 @@ class TodoService {
     return await Todo.find({}).populate("userId", "_id username email");
   }
 
+  async getAllByUser(userId) {
+    return await Todo.find({ userId: userId }).populate("userId", "_id username email");
+  }
+
   async getOne(todoId) {
     const todo = await Todo.findOne({ _id: todoId });
     if (!todo) throw new CustomError("Todo does not exists");
