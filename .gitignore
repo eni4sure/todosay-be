@@ -1,9 +1,8 @@
-old
 node_modules
-src/firebase/todosay-firebase-sdk.json
 
 # production env files
 .env
+src/config/env/prod.env.json
 
 # exclude files in uploads
 uploads/*

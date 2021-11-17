@@ -21,7 +21,7 @@ module.exports = (app) => {
                res.status(400).send(response(error.message, null, false));
           }
           else {
-               res.status(200).send(response(error.message, null, false));
+               res.status(500).send(response(error.message, null, false));
           }
      });
 

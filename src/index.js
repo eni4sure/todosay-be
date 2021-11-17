@@ -7,7 +7,7 @@ require("./middlewares/pre-route.middleware")(app);
 app.get("/", (req, res) => {
     return res
         .status(200)
-        .json({ message: "Hello world from Todosay Backend! :)" });
+        .json({ message: "Hello world from todosay Backend! :)" });
 });
 
 // API routes
@@ -20,6 +20,9 @@ const PORT = process.env.PORT || 4000;
 
 // Listen to server port
 app.listen(PORT, async () => {
+    // Initialize MongoDB connection
+    require("./database");
+
     console.log(
         `:::> Server listening on port ${PORT} @ http://localhost:${PORT}`
     );

@@ -1,5 +1,9 @@
 const router = require("express").Router();
+const trimIncomingRequests = require("../middlewares/trim-incoming-requests.middleware");
 
-router.use("/auth", require("./auth.route"));
+// Trim all incoming requests
+router.use(trimIncomingRequests);
 
-module.exports = router
+router.use("/auth", require("./auth.route.js"));
+
+module.exports = router;
