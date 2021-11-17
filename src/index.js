@@ -5,9 +5,7 @@ const app = require("express")();
 require("./middlewares/pre-route.middleware")(app);
 
 app.get("/", (req, res) => {
-    return res
-        .status(200)
-        .json({ message: "Hello world from todosay Backend! :)" });
+    return res .status(200) .json({ message: "Hello world from todosay Backend! :)" });
 });
 
 // API routes
